@@ -11,17 +11,25 @@
 body {
 	margin: 20px 20px 20px 20px;
 	font-family: "Comic Sans MS", cursive, sans-serif;
-
+	
 }
 #headerWrapper {
 
 }
-#myLogo {
-/* background-color: #79D479; */
-	border-radius: 5px;
+#takeMeHome {
+	display: inline-block;
+	text-align: center;
+	
+}
+#homeH1 {
+	display: inline-block;
 	color:#79D479;
 	font-size: 25px;
 	font-weight: bolder;
+	position: relative;
+	margin-left: 75%;
+	-webkit-transform:rotate(-28deg);
+	transform: rotate(-28deg);
 }
 .navbar-default {
 	background-color: #F2F261;
@@ -29,43 +37,87 @@ body {
 }
 .navbar-nav {
 	float: right;
+	color: #79D479;
 }
 .tbt {
-	padding: 10px 10px 10px 10px;
-	
+	/* margin-top:10px;
+	margin-bottom: 10px; */
 }
+.col-md-3 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 #pets {
 
 }
+#doggie {
+	margin-left: 40%;
+	position: relative;
+	border-radius: 5px;
+	background-color: beige;
+	text-align: center;
+	-webkit-animation: mymove 1s infinite; 
+	animation: mymove 0.5s ;
+}
 
+@keyframes mymove {
+    0%   {top: 0px;}
+   /*  50%  {top: 200px;} */
+   /*  75%  {top: 50px} */
+    100% {top: 100px;}
+}
+ 
 </style>
 </head>
 
 
 <body>
-<header>
-	<img src="doggie.jpg">
-	<div id="headerWrapper">
-		<div id="myLogo"> <h1> Take me home!</h1>
+<header id="headerWrapper">
+	<div id="takeMeHome"> 
+		<img src="doggie.jpg" id="doggie">
+		<span id="homeH1"><h1><b>Take me home!</b> </h1></span>
+	</div>
 		
-		<nav class="navbar navbar-default">
-  			<div class="container">
-  			<ul class="nav navbar-nav">
-  				<li><a href="#">About us </a></li>
-  				<li><a href="#"> Dog care </a></li>
-  				<li><a href="#"> Cat care </a></li>
-  				<li><a href="#">Shelters </a></li>
-  				<li> <a href="#">Find ur pet </a></li>
-			</ul>
+		<div>
+			<nav class="navbar navbar-default">
+  				<div class="container">
+  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  						<span class="icon-bar"></span>
+  						<span class="icon-bar"></span>
+  						<span class="icon-bar"></span>
+  					</button>
+  				 <div class="collapse navbar-collapse" id="myNavbar">
+  					<ul class="nav navbar-nav">			
+		  				<li><a href="#"> About us </a></li>
+		  				<li><a href="#"> Dog care </a></li>
+		  				<li><a href="#"> Cat care </a></li>
+		  				<li><a href="#"> Shelters </a></li>
+		  				<li> <a href="#">Find ur pet </a></li>
+					</ul>
+				</div>
 		</div>
 	</div>
 </header>
-	<div id="pets" class="">
-		<span class="tbt"> My name is : <span>...</span> <img src="dog1.jpg"> </span>
-		<span class="tbt"> My name is : <span>...</span> <img src="cat1.jpg"> </span>
-		<span class="tbt"> My name is : <span>...</span> <img src="dog2.jpg"> </span>
-		<span class="tbt"> My name is : <span>...</span> <img src="dog3.jpg"> </span>
-		<span class="tbt"> My name is : <span>...</span> <img src="cat2.jpg"> </span>
+	<div id="pets" class="container">
+		<div class="row"> 
+				<div class="col-md-3" class="tbt"><span > My name is : <span>...</span> <img src="dog1.jpg"></span></div>
+				<div class="col-md-3" class="tbt"><span> My name is : <span>...</span> <img src="cat1.jpg"></span></div>
+				<div class="col-md-3" class="tbt"><span> My name is : <span>...</span> <img src="dog2.jpg"></span></div>
+				<div class="col-md-3" class="tbt"><span> My name is : <span>...</span> <img src="dog3.jpg"></span></div>
+		</div>
+		<div class="row"> 
+				<div class="col-md-3" class="tbt"><span> My name is : <span>...</span> <img src="cat2.jpg"></span></div>
+				<div class="col-md-3" class="tbt"><spa> My name is : <span>...</span> <img src="cat1.jpg"></span></div>
+				<div class="col-md-3" class="tbt"><span> My name is : <span>...</span> <img src="dog2.jpg"></span></div>
+				<div class="col-md-3" class="tbt"><span> My name is : <span>...</span> <img src="dog3.jpg"></span></div>
+		</div>
+	</div>
+
+<!-- 
+		<div class="row"></div> -->
+			
+	
 	</div>
 
 </body>
