@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+<div>
+	<select id="myAnimal">
+		<option value="cat">Cat</option>
+		<option value="dog">Dog</option>	
+	</select>
+	<label for="myLocation">Location</label>
+	<input type="text" id="myLocation">
+	<input type="button" value="finished" id="mySubmit">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+<script type="text/javascript">
+
+	
+$("#mySubmit").click(function () {
+	console.log('check');
+	var myAnimal = $("#myAnimal").val();
+	var myLocation = $("#myLocation").val();
+	
+	console.log("My animal:"+ myAnimal +"myLocation:" + myLocation);
+
+	//$.getJSON('http://api.petfinder.com/my.method?format=json&key=12345&callback=?'')
+								/* method?format=json&key=12345&callback=?'')*/
+
+	$.getJSON("http://api.petfinder.com/my.pet.find?"
+
+		+ "format=json"
+		+ "&key=4763a2f8265edb1378a2d07af6e18bdf"
+		+ "&location=" + myLocation
+		+ "&animal=" + myAnimal
+		+ "&callback=?" //required for JsonP
+	)
+	.done(function(petApiData) { alert('Data retrieved!'); 
+	
+		console.log(petApiData);
+	})
+
+})
+
+</script>
+
+</body>
+</html>
