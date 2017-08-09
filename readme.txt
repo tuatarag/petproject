@@ -1,0 +1,2 @@
+The pet project is a website where I exercise responsivness through bootstrap (petFinder.html) and try to get the data 
+from pefinder.com (pets adoption website) using API for the first time (petfindertest.html)
